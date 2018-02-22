@@ -27,12 +27,10 @@ public class AppConfig {
 	@Bean
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-
 		dataSource.setDriverClassName(env.getProperty("mysql.connection.driver"));
 		dataSource.setUrl(env.getProperty("mysql.connection.url"));
 		dataSource.setUsername(env.getProperty("mysql.connection.username"));
 		dataSource.setPassword(env.getProperty("mysql.connection.password"));
-
 		return dataSource;
 	}
 
